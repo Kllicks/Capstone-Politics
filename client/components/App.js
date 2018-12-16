@@ -5,7 +5,8 @@ import Header from './Header';
 //props.children 
 const App = (props) => {
     return (
-        <div>
+        //classname container for materialize css to work with row and col s4 in auth form
+        <div className="container">
             <Header />
             {/* children component */}
             {/* body of our page gets swapped out as visit different routes */}
