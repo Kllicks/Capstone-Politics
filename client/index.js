@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 import ApolloClient from 'apollo-client';
 //react apollo exports several diff props one of which is apollo provider - why curly braces
 import { ApolloProvider } from 'react-apollo';
+import { Router, hashHistory, Route, IndexRoute } from 'react-router';
+
+import App from './components/App';
 
 const client = new ApolloClient({
   //identify every record that comes back from the server so apollo can identify information that already pulled from server and store in a local cache.
@@ -14,9 +17,12 @@ const client = new ApolloClient({
 const Root = () => {
   return (
     <ApolloProvider client={client}>
-      <div>
-        Auth Starter
-      </div>
+      <Router history={hashHistory}>
+        {/* always going to be displayed on the screen at all times */}
+        {/* always going to show the header and then it will show any nested component inside of it as well */}
+        <Route path="/" component={App}>
+        </Route>
+      </Router>
     </ApolloProvider>
   );
 };
