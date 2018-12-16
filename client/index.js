@@ -8,6 +8,7 @@ import { Router, hashHistory, Route, IndexRoute } from 'react-router';
 import App from './components/App';
 import LoginForm from './components/LoginForm';
 import SignupForm from './components/SignupForm';
+import Dashboard from './components/Dashboard';
 
 //whenever create your own network interface no longer makes assumption that your endpoint is hosted at /graphql.
 //need to tell it that its still the same /graphql
@@ -36,6 +37,7 @@ const Root = () => {
         <Route path="/" component={App}>
           <Route path="login" component={LoginForm} />
           <Route path="signup" component={SignupForm} />
+          <Route path="dashboard" component={Dashboard} />
         </Route>
       </Router>
     </ApolloProvider>
