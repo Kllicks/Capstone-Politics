@@ -7,21 +7,29 @@ class AuthForm extends Component {
         this.state = { email: '', password: ''};
     }
 
+    onSubmit(event) {
+        event.preventDefault();
+
+        //never going to mutate the object inside callback itself so this is fine
+        this.props.onSubmit(this.state);
+    }
+
     render() {
         return (
             //css for layout of the form
             <div className="row">
-                <form className="col s4">
+                <form onSubmit={this.onSubmit.bind(this)} className="col s4">
                     <div className="input-field">
-                        <label>Email</label>
                         <input 
+                            placeholder="Email"
                             value={this.state.email}
                             onChange={e => this.setState({ email: e.target.value })}
                         />
                     </div>
                     <div className="input-field">
-                        <label>Password</label>
                         <input 
+                            placeholder="Password"
+                            type="password"
                             value={this.state.password}
                             onChange={e => this.setState({ password: e.target.value })}
                         />
