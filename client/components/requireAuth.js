@@ -3,15 +3,23 @@ import { graphql } from 'react-apollo';
 import currentUserQuery from '../queries/CurrentUser';
 import { hashHistory } from 'react-router';
 
+
 //see where user is currently authenticated
 //if not, redirect to login route 
 
+
+export default(WrappedComponent) => {
 class RequireAuth extends Component {
     componentDidMount() { 
         if (this.props.data.loading && !this.props.data.user) {
             hashHistory.push('/login');
         }
     }
+    render() {
+        return <WrappedComponent {...this.props} />;
+    }
 }
 
-graphql(currentUserQuery)(RequireAuth);
+return graphql(currentUserQuery)(RequireAuth);
+};
+
