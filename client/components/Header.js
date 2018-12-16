@@ -5,8 +5,10 @@ import query from '../queries/CurrentUser';
 import mutation from '../mutations/Logout';
 
 class Header extends Component {
-    onLogoutCLick() {
-        this.props.mutate({});
+    onLogoutClick() {
+        this.props.mutate({
+            refetchQueries: [{ query }]
+        });
     }
 
     renderButtons() {
@@ -16,7 +18,7 @@ class Header extends Component {
 
         if(user) {
             return (
-                <li><a onCLick={this.onLogoutCLick.bind(this)}>Logout</a></li>
+                <li><a onClick={this.onLogoutClick.bind(this)}>Logout</a></li>
             );
         } else {
             return (
