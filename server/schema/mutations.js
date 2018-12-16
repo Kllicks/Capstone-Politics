@@ -9,7 +9,7 @@ const UserType = require('./types/user_type');
 //connnect to functions in auth.js
 const AuthService = require('../services/auth');
 
-
+//want mutations to feel repetitive b/c want them to be as simple and straightforward as possible. 
 const mutation = new GraphQLObjectType({
     name: 'Mutation',
     fields: {
@@ -39,6 +39,22 @@ const mutation = new GraphQLObjectType({
                 const { user } = req;
                 req.logout();
                 return user;
+            }
+        },
+        //login mutation 
+        login: {
+            //what it returns 
+            type: UserType,
+            //what it expects to have 
+            args: {
+                email: { type: GraphQLString},
+                password: { type: GraphQLString }
+            },
+            //here is what the mutation itself does /calls 
+            resolve(parentValue, { email, password }, req) {
+                //if need to know what this mutation does internally - need to go look at this external service
+                //abstracting complicated code out to helper object where this function takes care of complexity 
+                return AuthService.login({ email, password, req });
             }
         }
     }
