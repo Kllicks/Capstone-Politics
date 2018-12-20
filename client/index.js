@@ -11,6 +11,7 @@ import SignupForm from './components/SignupForm';
 import Dashboard from './components/Dashboard';
 import requireAuth from './components/requireAuth';
 
+
 //whenever create your own network interface no longer makes assumption that your endpoint is hosted at /graphql.
 //need to tell it that its still the same /graphql
 //credentials- tell apollo to send along cookies whenever it make a query to back end server
