@@ -14,7 +14,7 @@ export default () => {
                             <p>My Pokemon App</p>
                         </div>
                         <div className="card-action">
-                            <a href="http://pokedex.helenmharris.com">This is a link</a>
+                            <a href="http://pokedex.helenmharris.com">Link To Live Site!</a>
                         </div>
                     </div>
                 </div>
@@ -31,7 +31,7 @@ export default () => {
                             <p>My ChatBot App</p>
                         </div>
                         <div className="card-action">
-                            <a href="https://hharris0803.github.io/Chat-Bot/">This is a link</a>
+                            <a href="https://hharris0803.github.io/Chat-Bot/">Link To Live Site!</a>
                         </div>
                     </div>
                 </div>
@@ -48,7 +48,7 @@ export default () => {
                             <p>My Calculator App</p>
                         </div>
                         <div className="card-action">
-                            <a href="https://hharris0803.github.io/React-Calculator/">This is a link</a>
+                            <a href="https://hharris0803.github.io/React-Calculator/">Link To Live Site!</a>
                         </div>
                     </div>
                 </div>
@@ -65,7 +65,7 @@ export default () => {
                             <p>My SonglistApp</p>
                         </div>
                         <div className="card-action">
-                            <a href="http://musiclist.helenmharris.com/">This is a link</a>
+                            <a href="http://musiclist.helenmharris.com/">Link To Live Site!</a>
                         </div>
                     </div>
                 </div>
