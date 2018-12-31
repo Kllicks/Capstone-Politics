@@ -4,6 +4,7 @@ import { Link } from 'react-router';
 import query from '../queries/CurrentUser';
 import mutation from '../mutations/Logout';
 
+
 class Header extends Component {
     onLogoutClick() {
         this.props.mutate({
@@ -24,7 +25,7 @@ class Header extends Component {
             return (
                 <div>
                     <li>
-                        Please click signup or login to get started:
+                        Please click Signup or Login to get started:
                     </li>
                     <li>
                         <Link to="/signup">Signup</Link>
@@ -41,8 +42,9 @@ class Header extends Component {
         // console.log(this.props.data);
         return (
             <nav>
-                <div className="nav-wrapper">
+                <div className="nav-wrapper indigo darken-4">
                     <Link to="/" className="brand-logo left">
+                    <i className="material-icons">star</i>
                         Home
                     </Link>
                     <ul className="right">

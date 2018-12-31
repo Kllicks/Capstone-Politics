@@ -38,7 +38,7 @@ class AuthForm extends Component {
                     <div className="errors">
                         {this.props.errors.map(error => <div key={error}>{error}</div>)}
                     </div>
-                    <button className="btn">Submit</button>
+                    <button className="btn waves-effect waves-light red">Submit</button>
                 </form>
             </div>
         );
